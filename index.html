@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coast Restaurant &amp; Tavern at Sugarloaf — Seafood, Sushi &amp; Après</title>
+<meta name="description" content="Fresh seafood, sushi, cocktails and après-ski happy hour at Sugarloaf, Maine. Season opens December 18 — preview weekends from November 20.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Coast Restaurant &amp; Tavern at Sugarloaf">
+<meta property="og:description" content="Seafood, sushi, cocktails and après-ski at the Loaf.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Analytics: paste the client's tracking code here -->
+<style>
+:root{--bg:#f4efe2;--bg2:#ebe3cf;--card:#fffaf0;--ink:#0e2d54;--mute:#5b6b7e;--acc:#137f7d;--acc-ink:#ffffff;--line:rgba(14,45,84,.16);--navy:#0e2d54;--cream:#f5efe4;--teal:#3cc4c0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:'Roboto Slab',Georgia,serif;font-weight:700;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.4vw,48px);margin-bottom:14px}
+.wr{max-width:1160px;margin:0 auto;padding:0 20px}
+.sec{padding:90px 0}
+.kick{display:inline-block;color:var(--acc);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.lead{color:var(--mute);max-width:620px;font-size:17px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid transparent;transition:.2s;cursor:pointer;font-size:15px}
+.btn.pri{background:var(--acc);color:var(--acc-ink)}
+.btn.pri:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{border-color:var(--line);color:inherit;background:rgba(255,255,255,.06)}
+.btn.ghost:hover{border-color:var(--acc);color:var(--acc)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:.3s;color:var(--cream)}
+.nav.solid{color:var(--ink);background:rgba(244,239,226,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wr{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{text-decoration:none;line-height:1}
+.logo b{font-family:'Roboto Slab',serif;font-size:22px;letter-spacing:.08em}
+.logo{display:flex;align-items:center;gap:10px}.logo svg{width:40px;height:40px}
+.logo small{display:block;font-size:10px;letter-spacing:.3em;opacity:.7;text-transform:uppercase;margin-top:4px}
+.nav ul{display:flex;gap:26px;list-style:none}
+.nav ul a{text-decoration:none;font-size:14px;opacity:.75;transition:.2s}
+.nav ul a:hover{opacity:1}
+.nav .btn{padding:10px 18px;font-size:14px}
+.burger{display:none;background:none;border:0;color:inherit;font-size:26px;cursor:pointer}
+
+/* hero */
+.hero{color:var(--cream);position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:140px 0 70px;overflow:hidden;background:linear-gradient(180deg,#071220 0%,#0e2236 70%,#0c1a29 100%)}
+.hero .art{position:absolute;inset:0;width:100%;height:100%}
+.hero .wr{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(42px,7.4vw,92px);max-width:900px;margin:16px 0 20px}
+.hero h1 em{font-style:italic;color:var(--teal);font-weight:500}
+.hero p{color:#c9d5e1;font-size:clamp(16px,1.8vw,19px);max-width:560px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--line);font-size:14px}
+.dot{width:9px;height:9px;border-radius:50%;background:#7c8b9a}
+.dot.on{background:#5fd68a;box-shadow:0 0 0 4px rgba(95,214,138,.18)}
+.dot.soon{background:var(--teal);box-shadow:0 0 0 4px rgba(60,196,192,.2)}
+.snow i{position:absolute;top:-10px;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.7;animation:fall linear infinite}
+@keyframes fall{to{transform:translate3d(30px,105vh,0)}}
+
+/* countdown strip */
+.strip{background:var(--navy);color:var(--cream)}
+.strip .cd span{color:var(--teal)}
+.strip .wr{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:18px;padding-bottom:18px}
+.strip b{font-family:'Roboto Slab',serif;font-size:20px}
+.cd{display:flex;gap:18px;font-weight:600}
+.cd span{font-family:'Roboto Slab',serif;font-size:26px;display:block;line-height:1}
+.cd small{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+
+/* events */
+.ev{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:40px}
+.evc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:.25s}
+.evc:hover{transform:translateY(-4px);border-color:var(--acc);box-shadow:0 14px 30px rgba(14,45,84,.1)}
+.evc .d{display:flex;align-items:baseline;gap:8px;color:var(--acc)}
+.evc .d b{font-family:'Roboto Slab',serif;font-size:34px;line-height:1}
+.evc .d span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.evc h3{font-size:21px}
+.evc.hl{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+.evc.hl p{color:#c9d5e1}.evc.hl .d{color:var(--teal)}.evc.hl .hrs{color:var(--cream);border-color:rgba(245,239,228,.25)}.evc.hl .tag{background:rgba(60,196,192,.2);color:var(--teal)}
+.evc p{color:var(--mute);font-size:15px}
+.evc .hrs{font-size:14px;color:var(--ink);border-top:1px dashed var(--line);padding-top:10px;margin-top:auto;white-space:pre-line}
+.tag{align-self:flex-start;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(19,127,125,.12);color:var(--acc)}
+
+/* menu */
+.menu-sec{background:var(--bg2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 30px}
+.tabs button{font:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--mute);cursor:pointer;transition:.2s}
+.tabs button.act,.tabs button:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:6px 50px}
+.dish{padding:18px 0;border-bottom:1px solid var(--line)}
+.dish .t{display:flex;align-items:baseline;gap:10px}
+.dish h3{font-size:19px;font-weight:600}
+.dish .fill{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.dish .p{font-family:'Roboto Slab',serif;font-size:17px;font-weight:600;color:var(--ink);white-space:nowrap}
+.dish p{color:var(--mute);font-size:14px;margin-top:4px}
+.dish .b{font-family:Inter,sans-serif;font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:1px 6px;margin-left:6px;vertical-align:3px}
+.sub{grid-column:1/-1;font-family:'Roboto Slab',serif;font-size:24px;margin:26px 0 0;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.sub small{display:block;font-family:Inter,sans-serif;font-size:13px;font-weight:400;color:var(--mute);margin-top:2px}
+.note{margin-top:28px;font-size:14px;color:var(--mute)}
+
+/* sushi & apres */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{color:var(--cream);position:relative;border-radius:24px;padding:44px 40px;overflow:hidden;min-height:380px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line)}
+.panel.sushi{background:radial-gradient(circle at 80% 15%,rgba(127,211,196,.25),transparent 55%),linear-gradient(160deg,#123049,#0c1a29)}
+.panel .kick{color:var(--teal)}
+.panel.apres{background:radial-gradient(circle at 80% 15%,rgba(60,196,192,.28),transparent 55%),linear-gradient(160deg,#1d4b7a,#0e2d54)}
+.panel .ic{position:absolute;top:30px;right:30px;width:110px;height:110px;opacity:.9}
+.panel h2{font-size:clamp(28px,3.4vw,40px)}
+.panel ul{list-style:none;margin-top:16px;display:grid;gap:10px}
+.panel li{display:flex;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding-top:10px;font-size:15px}
+.panel li span{opacity:.7}
+.panel .btn{margin-top:24px;align-self:flex-start}
+
+/* news */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.post{border-top:2px solid var(--acc);padding-top:18px}
+.post time{font-size:13px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.post h3{font-size:22px;margin:8px 0}
+.post p{color:var(--mute);font-size:15px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:stretch}
+.info{display:grid;gap:22px;align-content:start}
+.info h3{font-family:Inter,sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:6px}
+.info p,.info a{font-size:18px;text-decoration:none}
+.info a:hover{color:var(--acc)}
+.hours{width:100%;border-collapse:collapse;font-size:15px}
+.hours td{padding:7px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--mute)}
+.hours tr.today td{color:var(--acc);font-weight:600}
+.soc{display:flex;gap:10px}
+.soc a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:14px;font-weight:600}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--card)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(.2)}
+
+/* reserve */
+.res{background:var(--card);box-shadow:0 20px 50px rgba(14,45,84,.08);border:1px solid var(--line);border-radius:28px;padding:56px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.res form{display:grid;gap:12px}
+.res .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.res input,.res select{font:inherit;font-size:15px;width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.res input:focus,.res select:focus{outline:2px solid var(--acc);outline-offset:1px}
+.res small{color:var(--mute);font-size:12px}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-size:14px}
+footer .wr{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer .made{display:inline-block;margin-top:8px;color:var(--mute);text-decoration:none;border-bottom:1px solid var(--line)}
+footer .made:hover{color:var(--acc)}
+
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;display:none;gap:10px}
+.fab a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--acc);color:var(--acc-ink);text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.fab a.alt{background:var(--navy);color:var(--cream)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .nav ul{position:fixed;inset:72px 0 auto;flex-direction:column;gap:0;background:var(--bg);color:var(--ink);border-bottom:1px solid var(--line);padding:10px 20px;display:none}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:12px 0;font-size:17px}
+  .burger{display:block}
+  .nav .btn{display:none}
+  .dishes,.duo,.visit,.res,.news{grid-template-columns:1fr}
+  .res{padding:32px 22px}
+  .fab{display:flex}
+}
+@media (max-width:600px){
+  .sec{padding:64px 0}
+  .res .row{grid-template-columns:1fr}
+  .dish .t{flex-wrap:wrap;column-gap:10px}.dish .fill{display:none}.dish h3{flex:1 1 auto}.dish .p{margin-left:auto}
+  .panel{padding:30px 24px;min-height:340px}
+  .panel .ic{width:80px;height:80px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wr">
+    <a class="logo" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 34c2-14 12-24 26-24 6 0 10 3 10 7-4-3-10-3-14 1 6-1 10 2 10 6-5-3-11-2-14 3" fill="none" stroke="#3cc4c0" stroke-width="3" stroke-linecap="round"/><path d="M14 38l9-13 5 6 3-4 7 11z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg><span><b>COAST</b><small>Restaurant &amp; Tavern</small></span></a>
+    <ul id="menuNav">
+      <li><a href="#events">What's on</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#sushi">Sushi &amp; Après</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn pri" href="#reserve">Reserve a table</a>
+    <button class="burger" id="burger" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <svg class="art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a4a6b"/><stop offset="1" stop-color="#13283f"/></linearGradient>
+      <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b3654"/><stop offset="1" stop-color="#0c1a29"/></linearGradient>
+      <radialGradient id="moon"><stop offset="0" stop-color="#fff7e6"/><stop offset=".6" stop-color="#ffe3c2" stop-opacity=".5"/><stop offset="1" stop-color="#ffe3c2" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle cx="1120" cy="200" r="140" fill="url(#moon)" opacity=".55"/>
+    <circle cx="1120" cy="200" r="44" fill="#fff4de"/>
+    <g fill="#fff" opacity=".6"><circle cx="180" cy="120" r="1.4"/><circle cx="320" cy="210" r="1"/><circle cx="520" cy="90" r="1.6"/><circle cx="700" cy="170" r="1"/><circle cx="860" cy="70" r="1.3"/><circle cx="1300" cy="120" r="1.2"/><circle cx="980" cy="300" r="1"/><circle cx="90" cy="300" r="1.1"/><circle cx="420" cy="320" r="1"/></g>
+    <path d="M0 620 L240 430 L380 520 L620 300 L760 400 L900 330 L1080 470 L1250 380 L1440 520 V900 H0Z" fill="url(#m1)"/>
+    <path d="M620 300 L680 352 L650 350 L615 372 L590 345 L560 360Z M900 330 L950 368 L925 372 L895 392 L870 366Z" fill="#e9f1f8" opacity=".85"/>
+    <path d="M520 370 L760 520" stroke="#f5efe4" stroke-width="1.2" opacity=".35"/>
+    <rect x="600" y="418" width="14" height="10" rx="2" fill="#ec7c4f" opacity=".9"/>
+    <path d="M0 700 L180 590 L340 660 L560 540 L760 650 L980 560 L1200 670 L1440 600 V900 H0Z" fill="url(#m2)"/>
+    <g fill="#0a1622"><path d="M120 720 l18 -60 l18 60z M150 730 l22 -76 l22 76z M1240 700 l18 -58 l18 58z M1272 712 l22 -74 l22 74z M1310 722 l16 -50 l16 50z"/></g>
+    <path d="M0 780 Q 360 740 720 780 T 1440 770 V900 H0Z" fill="#0c1a29"/>
+    <g fill="#ec7c4f"><rect x="1010" y="736" width="8" height="10" opacity=".9"/><rect x="1024" y="736" width="8" height="10" opacity=".7"/><rect x="1038" y="736" width="8" height="10" opacity=".9"/></g>
+  </svg>
+  <div class="snow" id="snow" aria-hidden="true"></div>
+  <div class="wr">
+    <span class="status" id="status"><i class="dot" id="statusDot"></i><span id="statusText">Season opens December 18</span></span>
+    <h1>Seafood, sushi &amp; <em>après</em> at the Loaf</h1>
+    <p>Coast Restaurant &amp; Tavern at Sugarloaf — fresh seafood, a full sushi bar, craft cocktails and a whole new place to eat, drink and gather after the mountain.</p>
+    <div class="cta">
+      <a class="btn pri" href="#menu">See the menu</a>
+      <a class="btn ghost" href="tel:+12073803818">Call 207-380-3818</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wr">
+    <b>Grand season opening — December 18</b>
+    <div class="cd" id="cd" aria-live="polite">
+      <div><span id="cdD">—</span><small>days</small></div>
+      <div><span id="cdH">—</span><small>hours</small></div>
+      <div><span id="cdM">—</span><small>min</small></div>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="events">
+  <div class="wr">
+    <span class="kick rv">What's on</span>
+    <h2 class="rv">Preview weekends &amp; events</h2>
+    <p class="lead rv">Join us before the grand opening. Reservations recommended — call or text Ralph at 207-380-3818.</p>
+    <div class="ev" id="evList"></div>
+  </div>
+</section>
+
+<section class="sec menu-sec" id="menu">
+  <div class="wr">
+    <span class="kick rv">Menu</span>
+    <h2 class="rv">From the coast to the mountain</h2>
+    <p class="lead rv">Seafood recipes from our Boothbay Harbor restaurant, a full sushi bar and tavern classics.</p>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="dishes" id="dishes"></div>
+    <p class="note">GF — gluten-free · V — vegetarian · VG — vegan · Served daily 11 AM–9 PM.<br>*Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.</p>
+  </div>
+</section>
+
+<section class="sec" id="sushi">
+  <div class="wr duo">
+    <div class="panel sushi rv">
+      <svg class="ic" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38" fill="#0c1a29" stroke="#7fd3c4" stroke-width="3"/><circle cx="50" cy="50" r="24" fill="#f5efe4"/><circle cx="50" cy="50" r="11" fill="#ec7c4f"/></svg>
+      <span class="kick">From December 18</span>
+      <h2>Sushi at the Loaf</h2>
+      <ul>
+        <li>Sushi bar at Coast <span>11 AM–8:30 PM daily</span></li>
+        <li>Grab &amp; Go Sushi <span>11 AM–3 PM · The SideBar</span></li>
+        <li>Specialty: Bluefin, Toro Tataki <span>after 3 PM</span></li>
+      </ul>
+      <a class="btn ghost" href="#menu" data-tab="Sushi Rolls">Explore sushi menu</a>
+    </div>
+    <div class="panel apres rv">
+      <svg class="ic" viewBox="0 0 100 100" aria-hidden="true"><path d="M30 20h40l-8 46H38z" fill="none" stroke="#3cc4c0" stroke-width="3"/><path d="M34 40h32l-4 24H38z" fill="#3cc4c0" opacity=".7"/><path d="M50 66v16M38 84h24" stroke="#3cc4c0" stroke-width="3"/></svg>
+      <span class="kick">Lunch &amp; après, Coast style</span>
+      <h2>After the mountain, come to Coast</h2>
+      <ul>
+        <li>Soon-to-be-famous Lunch Buffet <span>11 AM–3 PM daily</span></li>
+        <li>Après-Ski: drinks &amp; food specials <span>3–6 PM daily</span></li>
+        <li>Soups, entrées, full salad bar, kids' favorites <span>check the board</span></li>
+      </ul>
+      <a class="btn ghost" href="#menu" data-tab="Entrées">See entrées</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="news" style="padding-top:0">
+  <div class="wr">
+    <span class="kick rv">News</span>
+    <h2 class="rv">From the tavern</h2>
+    <div class="news" id="newsList"></div>
+  </div>
+</section>
+
+<section class="sec" id="reserve" style="padding-top:0">
+  <div class="wr">
+    <div class="res rv">
+      <div>
+        <span class="kick">Reservations</span>
+        <h2>Save your table</h2>
+        <p class="lead">Thanksgiving and holiday weekends fill up fast. Send a request and we'll text you back to confirm — or simply call Ralph.</p>
+      </div>
+      <form id="resForm">
+        <div class="row">
+          <input name="name" placeholder="Your name" required autocomplete="name">
+          <input name="phone" type="tel" placeholder="Phone" required autocomplete="tel">
+        </div>
+        <div class="row">
+          <input name="date" type="date" required aria-label="Date">
+          <select name="guests" aria-label="Guests"><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5–6 guests</option><option>7+ guests</option></select>
+        </div>
+        <input name="time" placeholder="Preferred time, e.g. 6:30 PM">
+        <button class="btn pri" type="submit">Send request by text</button>
+        <small>By sending, you agree to be contacted about your reservation.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit" style="padding-top:0">
+  <div class="wr">
+    <span class="kick rv">Visit</span>
+    <h2 class="rv">Find us at Sugarloaf</h2>
+    <div class="visit">
+      <div class="info rv">
+        <div><h3>Address</h3><p>5092 Sugarloaf Access Rd.<br>Carrabassett Valley, Maine 04947</p></div>
+        <div><h3>Call or text</h3><a href="tel:+12073803818">207-380-3818</a></div>
+        <div><h3>Email</h3><a href="mailto:ralphcsmith2@gmail.com">ralphcsmith2@gmail.com</a></div>
+        <div><h3>Hours from December 18</h3>
+          <table class="hours" id="hours"></table>
+        </div>
+        <div class="soc"><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">FB</a></div>
+      </div>
+      <div class="map rv">
+        <iframe title="Map: Coast at Sugarloaf" loading="lazy" src="https://maps.google.com/maps?q=5092%20Sugarloaf%20Access%20Rd%2C%20Carrabassett%20Valley%2C%20ME%2004947&z=13&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wr">
+    <div>© 2026 Coast Restaurant &amp; Tavern · Sugarloaf, Maine<br>
+      <a class="made" href="https://artemdobrovolskii1-bit.github.io/html-sait/" target="_blank" rel="noopener">Website by HTML_SAIT</a></div>
+    <div>5092 Sugarloaf Access Rd. · <a href="tel:+12073803818">207-380-3818</a></div>
+  </div>
+</footer>
+
+<div class="fab"><a href="tel:+12073803818" aria-label="Call">☎</a><a class="alt" href="sms:+12073803818" aria-label="Text us">SMS</a></div>
+
+<script>
+(function(){
+  /* ===== CONTENT =====
+     Menu, events and news can live in a Google Sheet so the owner edits them without code.
+     Publish the sheet (File → Share → Publish to web) and paste its ID below.
+     Sheets: "menu" (category, section|note, name, description, price, badges), "events" (date, title, text, hours, tag),
+     "news" (date, title, text). Leave empty to use the built-in content below. */
+  var SHEET_ID = '';
+
+  var DATA = {
+    menu: [
+['Appetizers','','Oysters on the Half Shell*','Damariscotta River, Oysters of the Day','$3.80 ea · $22 ½ doz · $40 doz','GF'],
+      ['Appetizers','','Garlic Shrimp','5 large shrimp sautéed in garlic herb butter with peppers, onions and cherry tomatoes','$20',''],
+      ['Appetizers','','Baked Crab-Stuffed Mushrooms','Large button mushrooms, Maine crab imperial, Lobster Newburg style sauce','$20',''],
+      ['Appetizers','','Painted Calamari','Deep-fried squid rings and tentacles, honey mustard, red pepper aioli and cucumber wasabi','$17',''],
+      ['Appetizers','','Bacon Wrapped Scallops','3 large scallops wrapped in bacon and deep-fried, served with sushi rice and eel sauce','$18','GF'],
+      ['Appetizers','','Veggie Tostadas','Two crispy corn tortilla cups: guacamole, pico de gallo and queso; bruschetta, Parmesan, herbs and balsamic glaze','$18','GF V'],
+      ['Appetizers','','Hoisin Beef Skewers*','Seared filet mignon skewer with hoisin sauce & sesame seeds, served over sushi rice','$24',''],
+      ['Soups & Salads','Soups','New England Clam Chowder','Made famous at our Boothbay Harbor restaurant','$12 cup · $17 bowl',''],
+      ['Soups & Salads','Soups','French Onion Soup','Caramelized onions, beef stock, crusty bread, gruyère, fontina cheese','$14 crock',''],
+      ['Soups & Salads','Soups','Soup of the Day','Always made from homemade stock','Market',''],
+      ['Soups & Salads','Salads','Burrata','Crisp greens, tomatoes, cucumbers, red onion, burrata, balsamic glaze','$20','GF V'],
+      ['Soups & Salads','Salads','Beet','Roasted sugar beets, cucumbers, crisp greens, red onions, goat cheese, balsamic glaze','$20','GF V'],
+      ['Soups & Salads','Salads','Gnocchi','Romaine, EVOO, sautéed gnocchi, tomatoes, basil, mozzarella, balsamic glaze','$20','GF V'],
+      ['Soups & Salads','Salads','Caesar or Garden','Crispy romaine, Caesar dressing, Parmesan & croutons, or mixed greens with seasonal vegetables','$15','GF V VG'],
+      ['Soups & Salads','Salads','Grilled or Blackened Toppers','Lobster tail 30 · Bluefin tuna* 23 · Scallops 20 · Shrimp 15 · Salmon / Swordfish 15 · Chicken 12 · Haddock 12 · Steak of the day* Mkt','from $12',''],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','Lobster Roll','Traditional or butter-poached lobster on a buttered, grilled New England-style roll','Market',''],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','Haddock Sandwich','Deep-fried, grilled or blackened haddock, lettuce, tomato, onion, tartar sauce, grilled bulky roll','$22',''],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','Seahorse Tuna*','Grilled or blackened Bluefin tuna, seaweed salad, horseradish sauce, bulky roll','$28',''],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','Blackened Chicken Pesto','Blackened chicken, pesto, roasted red peppers, Swiss, grilled sourdough bread','$20',''],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','French Dip','Shaved prime rib, caramelized onions, gruyère, mustard, au jus, crusty roll','$26',''],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','Vegan Tofu & Cheddar Sandwich','Herb-marinated baked tofu, tamari, cinnamon apples, fig jam, vegan cheddar, lemon tahini slaw on ciabatta','$18','GF V VG'],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','Pastrami Reuben','Pastrami, sauerkraut, Swiss cheese, thousand island dressing, grilled sourdough','$22',''],
+      ['Sandwiches & Tacos','Sandwiches|Served with our side of the day, or fries for $3 more. Gluten-free rolls on request','Coast Burger*','½ lb grilled beef patty on a bulky roll with lettuce, tomato, onion, pickle and fries. Add $3 each: cheddar, Swiss, American, blue cheese, bacon, onions','$17',''],
+      ['Sandwiches & Tacos','Tacos: twins or triplets|With house beans and rice, flour or corn tortillas (gluten-free with corn)','Lobster Tacos','Butter-poached lobster, roasted corn, guacamole, queso fresco, avocado cilantro crema','Market',''],
+      ['Sandwiches & Tacos','Tacos: twins or triplets|With house beans and rice, flour or corn tortillas (gluten-free with corn)','Fish Tacos','Local haddock or catch of the day, fried, grilled or blackened, slaw, pico de gallo, queso fresco, cilantro lime crema','$22 / $32 · catch $34 / $40',''],
+      ['Sandwiches & Tacos','Tacos: twins or triplets|With house beans and rice, flour or corn tortillas (gluten-free with corn)','Shrimp Tacos','Fried shrimp, Baja slaw, cilantro lime crema','$26 / $34',''],
+      ['Sandwiches & Tacos','Tacos: twins or triplets|With house beans and rice, flour or corn tortillas (gluten-free with corn)','Steak Tacos','Marinated grilled steak of the day, caramelized onions and mushrooms, blue cheese','$28 / $36',''],
+      ['Sandwiches & Tacos','Tacos: twins or triplets|With house beans and rice, flour or corn tortillas (gluten-free with corn)','Vegan Tacos','Roasted root vegetables, orange curry sauce, baked tofu, tahini slaw, vegan cheddar','$20 / $28','GF V VG'],
+      ['Sandwiches & Tacos','Tacos: twins or triplets|With house beans and rice, flour or corn tortillas (gluten-free with corn)','Chicken Tacos','Blackened chicken breast, guacamole, lettuce, pineapple salsa, queso fresco','$22 / $31',''],
+      ['Sandwiches & Tacos','Tacos: twins or triplets|With house beans and rice, flour or corn tortillas (gluten-free with corn)','Bluefin Tuna Tacos*','Sesame seed–encrusted, seared rare tuna, Grand Marnier teriyaki drizzle, seaweed salad','$26 / $36',''],
+      ['Entrées','','Maine Lobster','Steamed 1½ lb Maine lobster, drawn butter, lemon, potato and corn on the cob','Market',''],
+      ['Entrées','','Crab-Stuffed Lobster Tail','Single or twin Maine lobster tail stuffed with house-made crab imperial, drawn butter, rice and vegetables','$45 · twin $65',''],
+      ['Entrées','','Sesame Tuna*','Nori-marinated Bluefin, sesame-crusted and seared rare, sushi rice, seaweed salad, Grand Marnier tamari glaze','$45','GF'],
+      ['Entrées','','Butter-poached Halibut Piccata','Lemon-lime caper butter, rice and seasonal vegetables','$35',''],
+      ['Entrées','','Spicy Seafood Boil','Lobster tail, crab legs, shrimp, oysters, scallops and sausage, potato and corn on the cob','$65',''],
+      ['Entrées','','Scallops & Crispy Gnocchi','Scallops, butter, garlic, pancetta, crispy gnocchi and Parmigiano Reggiano','$45','GF'],
+      ['Entrées','','Fried Seafood Platter','Haddock, shrimp, scallops and shellfish of the day, hand-breaded, with fries, slaw and tartar','$48',''],
+      ['Entrées','','Crab-Stuffed Haddock','Baked haddock stuffed with house-made crab imperial, rice and vegetables','$38',''],
+      ['Entrées','','Salmon & Lobster Sauce','Spice-rubbed grilled salmon, Lobster Newburg style sauce, rice and vegetables','$35',''],
+      ['Entrées','','Vegan Sticky Tofu Bowl','Five-spice tofu over sticky rice, roasted vegetables, brown sugar, tamari & chili glaze','$30','GF V VG'],
+      ['Entrées','','Grilled Seafood Platter','Garlic butter–basted swordfish, shrimp, scallops and oysters, potato and vegetables','$48','GF'],
+      ['Entrées','','Seafood Gumbo','Lobster, crab, shrimp, scallops & sausage in a rich caramel roux, served over rice','$48',''],
+      ['Risotto & Pasta','Bistro Risotto|Recipes developed at our coastal restaurant in Boothbay Harbor','Seafood Risotto','Lobster, shrimp, scallops & catch of the day, creamy three-cheese herb risotto','$48',''],
+      ['Risotto & Pasta','Bistro Risotto|Recipes developed at our coastal restaurant in Boothbay Harbor','Lobster Risotto','Sautéed lobster, roasted corn, asparagus & goat cheese over three-cheese risotto','Market',''],
+      ['Risotto & Pasta','Bistro Risotto|Recipes developed at our coastal restaurant in Boothbay Harbor','Haddock Risotto','Garlic butter–basted grilled haddock, blistered tomatoes, three-cheese herb risotto','$33',''],
+      ['Risotto & Pasta','Bistro Risotto|Recipes developed at our coastal restaurant in Boothbay Harbor','BBQ Chicken Risotto','Flame-grilled chicken breast, BBQ sauce, pineapple salsa, three-cheese risotto','$30',''],
+      ['Risotto & Pasta','Bistro Risotto|Recipes developed at our coastal restaurant in Boothbay Harbor','Vegan Sugar Beet Risotto','Creamy pesto risotto with sugar beets, vegan cheddar & toasted walnuts','$35','GF V VG'],
+      ['Risotto & Pasta','Bistro Risotto|Recipes developed at our coastal restaurant in Boothbay Harbor','House Risotto','Creamy three-cheese herb risotto. Add a protein from the toppers','$18',''],
+      ['Risotto & Pasta','Pasta','Bolognese','Beef, pork, veal, pancetta, tomato, herbs, fettuccine and Parmesan','$28',''],
+      ['Risotto & Pasta','Pasta','Seafood Extravaganza','Lobster, shrimp, scallops & haddock over fettuccine with Alfredo or Marinara','$48',''],
+      ['Risotto & Pasta','Pasta','Build Your Pasta','Fettuccine with Parmigiano Reggiano: Marinara, Fra Diavolo, Alfredo, Pesto, Scampi or Vodka','$20',''],
+      ['Risotto & Pasta','Pasta','Pasta & Risotto Toppers','Lobster tail 30 · Bluefin tuna* 23 · Halibut 23 · Scallops 20 · Shrimp 15 · Salmon / Swordfish 15 · Haddock 12 · Chicken 12','from $12',''],
+      ['Land & Grill','From the Land','Hot Rock Steak*','Steak of the day on a sizzling 750° volcanic rock, steak sauce, potato & vegetables','Market',''],
+      ['Land & Grill','From the Land','Pork Loin Chop','Brown sugar–rubbed grilled pork chop, buttery cinnamon apples, potato & vegetables','$38',''],
+      ['Land & Grill','From the Land','Prime Rib*','Slow-roasted, horseradish sauce, au jus, potato and vegetables. After 2 PM, while supplies last','King $48 · Queen $38',''],
+      ['Land & Grill','Grilled or Blackened|Served with rice, vegetable of the day and grilled pineapple salsa','Lobster Tail · Scallops · Bluefin Tuna*','','$40',''],
+      ['Land & Grill','Grilled or Blackened|Served with rice, vegetable of the day and grilled pineapple salsa','Halibut','','$38',''],
+      ['Land & Grill','Grilled or Blackened|Served with rice, vegetable of the day and grilled pineapple salsa','Salmon / Swordfish','','$30',''],
+      ['Land & Grill','Grilled or Blackened|Served with rice, vegetable of the day and grilled pineapple salsa','Shrimp · Haddock','','$28',''],
+      ['Land & Grill','Grilled or Blackened|Served with rice, vegetable of the day and grilled pineapple salsa','Chicken Breast','','$24',''],
+      ['Land & Grill','Breaded & Deep-Fried|Served with fries and slaw','Scallops · Oysters','','$38',''],
+      ['Land & Grill','Breaded & Deep-Fried|Served with fries and slaw','Shrimp','','$26',''],
+      ['Land & Grill','Breaded & Deep-Fried|Served with fries and slaw','Fish & Chips (Haddock)','','$24',''],
+      ['Land & Grill','Breaded & Deep-Fried|Served with fries and slaw','Chicken Tenders','','$18',''],
+      ['Land & Grill','Breaded & Deep-Fried|Served with fries and slaw','Clams of the Day','','Market',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Rainbow Roll*','California roll with tuna, yellowtail, salmon & shrimp','$25',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Spider Roll','Deep-fried softshell crab, avocado, lettuce, cucumber, yamagobo, tobiko, sweet soy','$16 half · $28 full',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','High Roller','California roll, seared salmon, green onion, macadamia nuts, sweet soy and pesto mayonnaise','$25',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Mine Special Roll','California roll, white fish, spicy sauce, green onion','$21',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Red Dragon Roll*','Shrimp tempura, spicy tuna, red tobiko, green onion, macadamia nuts, sweet soy','$25',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Triple Tuna Roll*','Spicy tuna, avocado & cucumber, topped with tuna, jalapeño, ponzu, tobiko & sesame','$27',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Golden Dragon Roll','Shrimp tempura, crabmeat, mango slices, tobiko and spicy mayo','$25',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Alligator Roll','Shrimp tempura, crabmeat roll topped with eel, avocado, tobiko and sweet soy','$30',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Crunchy Deep-Fried Roll','Tuna or salmon, sweet soy, spicy mayo & sesame','$20',''],
+      ['Sushi Rolls','Fusion Rolls|Inside-out: rice outside, seaweed inside','Spicy Lobster Roll','Maine lobster, avocado, spicy sauce & tobiko','Market',''],
+      ['Sushi Rolls','Classic Rolls','California Roll','Maine crabmeat, avocado, cucumber','$16',''],
+      ['Sushi Rolls','Classic Rolls','Salmon or Spicy Tuna Roll*','Salmon & avocado, or tuna, avocado, cucumber & tobiko','$16',''],
+      ['Sushi Rolls','Classic Rolls','Negihama Roll*','Yellowtail, scallion, avocado and tobiko','$18',''],
+      ['Sushi Rolls','Classic Rolls','Shrimp Tempura Roll','Tempura shrimp, avocado and sweet soy','$17',''],
+      ['Sushi Rolls','Classic Rolls','Tuna Mango Roll*','Tuna, mango, cream cheese and tobiko','$17',''],
+      ['Sushi Rolls','Classic Rolls','Philadelphia Roll','Smoked salmon, cream cheese and cucumber','$18',''],
+      ['Sushi Rolls','Classic Rolls','Eel Roll','BBQ eel, avocado, cucumber, eel sauce and sesame seeds','$19',''],
+      ['Sushi Rolls','Classic Rolls','Maki Rolls','Salmon / Tuna* 12 · Yellowtail 14 · Crabmeat 12 · Avocado / Cucumber 10','from $10',''],
+      ['Sushi Rolls','Vegetarian Rolls','Thai Vegetarian Roll','Peanut sauce, tofu, cucumber, pickled daikon, yamagobo, cilantro and sweet chili','$10 half · $17 full','GF V'],
+      ['Sushi Rolls','Vegetarian Rolls','Taka’s Baked Vegetarian Roll','Avocado, cucumber, cream cheese, basil, spicy sauce, sweet soy, scallion, sesame','$18','GF V'],
+      ['Sushi Rolls','Vegetarian Rolls','Avocado & Cucumber Roll','Avocado & cucumber, or add Philadelphia cheese','$10 · Philly $12','GF V'],
+      ['Sushi Boats & Specialty','Sushi Boats','House Boat*','California roll, yellowtail maki, yellowtail or salmon sashimi and nigiri (2 pieces each)','$40',''],
+      ['Sushi Boats & Specialty','Sushi Boats','Crab Boat','California roll, crab maki roll, ½ spider roll (4 pieces)','$40',''],
+      ['Sushi Boats & Specialty','Sushi Boats','Tuna Boat*','Spicy tuna roll, tuna maki roll, Bluefin nigiri and sashimi (2 pieces each)','$44',''],
+      ['Sushi Boats & Specialty','Sushi Boats','Sashimi or Nigiri Boat*','Bluefin tuna, Bluefin toro, salmon & yellowtail','$55',''],
+      ['Sushi Boats & Specialty','Sushi Boats','Chef’s Boat of the Day*','Ask your server','Market',''],
+      ['Sushi Boats & Specialty','Specialty|Available after 3 PM','Taka’s Bluefin Tartar*','Diced Bluefin with spicy mayo & jalapeño, avocado, pickled ginger, sesame crackers','$26',''],
+      ['Sushi Boats & Specialty','Specialty|Available after 3 PM','Toro Tataki*','Asian-marinated, seared rare fatty Bluefin tuna with tataki sauce','$32',''],
+      ['Sushi Boats & Specialty','Specialty|Available after 3 PM','Bluefin Carpaccio*','Seared rare, chilled and sliced thin, seaweed salad and horseradish sauce','$26',''],
+      ['Sushi Boats & Specialty','Specialty|Available after 3 PM','Sesame Tuna Bites*','Breadcrumb-breaded, deep-fried Bluefin tuna with Asian sauce','$20',''],
+      ['Sushi Boats & Specialty','Sashimi or Nigiri|6 pieces of your choice','Salmon · Bluefin Tuna*','','$26',''],
+      ['Sushi Boats & Specialty','Sashimi or Nigiri|6 pieces of your choice','Yellowtail','','$28',''],
+      ['Sushi Boats & Specialty','Sashimi or Nigiri|6 pieces of your choice','Bluefin Toro*','','$32',''],
+      ['Sushi Boats & Specialty','Sashimi or Nigiri|6 pieces of your choice','Sampler*','Pick any three fish, 2 pieces each','$30',''],
+      ['Sushi Boats & Specialty','Sashimi or Nigiri|6 pieces of your choice','Jalapeño Sashimi* · Tiradito*','Jalapeños, cilantro & ponzu · lime, yuzu, sea salt, cilantro & chili paste','$32',''],
+      ['Sushi Boats & Specialty','Poke & Sides','Hawaiian Poke*','Rice or salad bowl with Bluefin tuna, Bluefin toro or salmon in Taka’s original poke sauce','$26',''],
+      ['Sushi Boats & Specialty','Poke & Sides','Sushi Sides','Seaweed salad 8 · Sushi rice 5 · Edamame 7 · Spring roll 8 / shrimp 12','from $5','']
+    ],
+    events: [
+      ['2026-11-20','Soft Opening Weekend','Come get an early taste of Coast with our modified opening menu.','Fri Nov 20 · 3–9 PM\nSat Nov 21 · 11 AM–9 PM\nSun Nov 22 · 11 AM–4 PM','Preview'],
+      ['2026-11-26','Thanksgiving at Coast','Turkey & Ham Dinner with all the trimmings. Reservations recommended.','Thu Nov 26 · 11 AM–6 PM','Reserve'],
+      ['2026-11-27','Thanksgiving Weekend','Open all weekend after the holiday.','Fri–Sat · 11 AM–9 PM\nSun Nov 29 · 11 AM–4 PM',''],
+      ['2026-12-04','December Preview Weekends','Full menu available. December 4–6 and 11–13.','Fri–Sat · 11 AM–9 PM\nSun · 11 AM–7 PM','Full menu'],
+      ['2026-12-18','Grand Season Opening','The season starts — sushi, après-ski and the full Coast menu, every day.','Daily · 11 AM–9 PM','Opening']
+    ],
+    news: [
+      ['2026-10-20','Sushi is coming to the Loaf','From December 18: Grab & Go sushi at The SideBar and the full sushi menu at Coast.'],
+      ['2026-10-15','Preview weekends announced','Soft opening November 20–22, then Thanksgiving and December preview weekends.'],
+      ['2026-10-01','Après, Coast style','Happy hour 3–6 PM every day of the season: drinks, food specials, good times.']
+    ]
+  };
+  var HOURS = [['Monday','11 AM–9 PM'],['Tuesday','11 AM–9 PM'],['Wednesday','11 AM–9 PM'],['Thursday','11 AM–9 PM'],['Friday','11 AM–9 PM'],['Saturday','11 AM–9 PM'],['Sunday','11 AM–9 PM']];
+  var OPENING = new Date('2026-12-18T11:00:00-05:00');
+
+  function $(id){return document.getElementById(id)}
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function parts(d){var x=new Date(d+'T12:00:00');return isNaN(x)?null:{d:x.getDate(),m:MON[x.getMonth()],y:x.getFullYear(),t:x}}
+
+  function renderEvents(){
+    var today = new Date(); today.setHours(0,0,0,0);
+    $('evList').innerHTML = DATA.events.filter(function(e){var p=parts(e[0]);return !p||p.t>=today||e[4]==='Opening'}).map(function(e){
+      var p = parts(e[0]) || {d:'',m:e[0]};
+      return '<article class="evc rv'+(e[4]==='Opening'?' hl':'')+'"><div class="d"><b>'+p.d+'</b><span>'+p.m+'</span></div>'+
+        (e[4]?'<span class="tag">'+esc(e[4])+'</span>':'')+'<h3>'+esc(e[1])+'</h3><p>'+esc(e[2])+'</p><div class="hrs">'+esc(e[3])+'</div></article>';
+    }).join('');
+  }
+  var current;
+  function renderMenu(cat){
+    var cats = []; DATA.menu.forEach(function(r){if(cats.indexOf(r[0])<0)cats.push(r[0])});
+    current = cat && cats.indexOf(cat)>=0 ? cat : cats[0];
+    $('tabs').innerHTML = cats.map(function(c){return '<button role="tab" aria-selected="'+(c===current)+'" class="'+(c===current?'act':'')+'">'+esc(c)+'</button>'}).join('');
+    var last = null, html = '';
+    DATA.menu.filter(function(r){return r[0]===current}).forEach(function(r){
+      if (r[1] && r[1]!==last){ var s=r[1].split('|'); html += '<div class="sub">'+esc(s[0])+(s[1]?'<small>'+esc(s[1])+'</small>':'')+'</div>'; }
+      last = r[1];
+      var badges = (r[5]||'').split(/\s+/).filter(Boolean).map(function(b){return '<span class="b">'+esc(b)+'</span>'}).join('');
+      html += '<div class="dish"><div class="t"><h3>'+esc(r[2])+badges+'</h3><span class="fill"></span><span class="p">'+esc(r[4])+'</span></div>'+(r[3]?'<p>'+esc(r[3])+'</p>':'')+'</div>';
+    });
+    $('dishes').innerHTML = html;
+  }
+  function renderNews(){
+    $('newsList').innerHTML = DATA.news.map(function(n){var p=parts(n[0]);
+      return '<article class="post rv"><time>'+(p?p.m+' '+p.d+', '+p.y:esc(n[0]))+'</time><h3>'+esc(n[1])+'</h3><p>'+esc(n[2])+'</p></article>'}).join('');
+  }
+  function renderHours(){
+    var wd = (new Date().getDay()+6)%7;
+    $('hours').innerHTML = HOURS.map(function(h,i){return '<tr'+(i===wd?' class="today"':'')+'><td>'+h[0]+'</td><td>'+h[1]+'</td></tr>'}).join('');
+  }
+  function status(){
+    var now = new Date(), dot=$('statusDot'), txt=$('statusText');
+    if (now < OPENING){
+      var soft = new Date('2026-11-20T15:00:00-05:00');
+      dot.className='dot soon';
+      txt.textContent = now < soft ? 'Preview weekends from November 20 · Season opens December 18' : 'Preview weekends now · Season opens December 18';
+      return;
+    }
+    var h = Number(new Intl.DateTimeFormat('en-US',{hour:'numeric',hour12:false,timeZone:'America/New_York'}).format(now));
+    var open = h>=11 && h<21;
+    dot.className = 'dot'+(open?' on':'');
+    txt.textContent = open ? 'Open now · until 9 PM' : 'Closed now · opens at 11 AM';
+  }
+  function countdown(){
+    var ms = OPENING - new Date();
+    if (ms<=0){ $('cd').innerHTML='<b>Now open for the season</b>'; return; }
+    $('cdD').textContent = Math.floor(ms/864e5);
+    $('cdH').textContent = Math.floor(ms/36e5)%24;
+    $('cdM').textContent = Math.floor(ms/6e4)%60;
+  }
+  function reveal(){
+    var els = document.querySelectorAll('.rv:not(.in)');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+  function renderAll(){renderEvents();renderMenu(current);renderNews();renderHours();reveal()}
+
+  /* Google Sheets loader (optional) */
+  function csv(text){
+    var rows=[],row=[],f='',q=false;
+    for (var i=0;i<text.length;i++){var c=text[i];
+      if(q){ if(c==='"'){ if(text[i+1]==='"'){f+='"';i++} else q=false } else f+=c }
+      else if(c==='"') q=true; else if(c===','){row.push(f);f=''} else if(c==='\n'){row.push(f);rows.push(row);row=[];f=''} else if(c!=='\r') f+=c;
+    }
+    if(f||row.length){row.push(f);rows.push(row)}
+    return rows.slice(1).filter(function(r){return r.join('').trim()});
+  }
+  function loadSheets(){
+    if (!SHEET_ID) return;
+    ['menu','events','news'].forEach(function(name){
+      fetch('https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:csv&sheet='+name)
+        .then(function(r){return r.ok?r.text():Promise.reject()})
+        .then(function(t){var rows=csv(t); if(rows.length){DATA[name]=rows; renderAll()}})
+        .catch(function(){});
+    });
+  }
+
+  /* UI */
+  $('tabs').addEventListener('click',function(e){if(e.target.tagName==='BUTTON')renderMenu(e.target.textContent)});
+  document.querySelectorAll('[data-tab]').forEach(function(a){a.addEventListener('click',function(){renderMenu(a.getAttribute('data-tab'))})});
+  var nav=$('nav'); function onScroll(){nav.classList.toggle('solid',window.scrollY>40)} window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  $('burger').addEventListener('click',function(){$('menuNav').classList.toggle('open')});
+  $('menuNav').addEventListener('click',function(e){if(e.target.tagName==='A')$('menuNav').classList.remove('open')});
+  $('resForm').addEventListener('submit',function(e){
+    e.preventDefault(); var f=e.target;
+    var body='Reservation request: '+f.name.value+', '+f.guests.value+', '+f.date.value+(f.time.value?' at '+f.time.value:'')+'. Phone: '+f.phone.value;
+    location.href='sms:+12073803818?&body='+encodeURIComponent(body);
+  });
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var s=$('snow'); for(var i=0;i<40;i++){var d=document.createElement('i');d.style.left=Math.random()*100+'%';d.style.animationDuration=(8+Math.random()*10)+'s';d.style.animationDelay=(-Math.random()*18)+'s';d.style.opacity=(.3+Math.random()*.6).toFixed(2);s.appendChild(d)}
+  }
+
+  renderAll(); status(); countdown(); setInterval(function(){status();countdown()},30000);
+  loadSheets();
+})();
+</script>
+</body>
+</html>
